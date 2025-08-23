@@ -1,0 +1,19 @@
+.custom-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  flex: 0 1 auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.main-content {
+  flex: 1 1 auto;
+}
+
+.footer-container {
+  flex: 0 1 auto;
+  border-top: 1px solid #ddd;
+}

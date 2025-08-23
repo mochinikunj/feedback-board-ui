@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('./../public/assets/fonts/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url('./../public/assets/fonts/Roboto/Roboto-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url('./../public/assets/fonts/Roboto/Roboto-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Karla Regular';
+  src: url('./../public/assets/fonts/Karla/static/Karla-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Karla Medium';
+  src: url('./../public/assets/fonts/Karla/static/Karla-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Karla Bold';
+  src: url('./../public/assets/fonts/Karla/static/Karla-Bold.ttf');
+}
