@@ -74,6 +74,7 @@ export class FeedbackComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.healthCheck();
     this.getFeedbackList();
   }
 
@@ -98,6 +99,22 @@ export class FeedbackComponent implements OnInit {
 
     this.isSubmitting = true;
     this.submitFormToBackend(this.feedbackForm.value);
+  }
+
+  healthCheck() {
+    this.common.healthCheck().subscribe({
+      next: (response: any) => {
+        if (response && response.status === 'OK') {
+          console.log('Server is healthy...');
+        }
+      },
+      error: (err) => {
+        alert('Server is down. Please try again later.');
+      },
+      complete: () => {
+        console.log('Completed healthCheck call...');
+      },
+    });
   }
 
   submitFormToBackend(request: ICreateFeedbackRequest) {
@@ -135,7 +152,7 @@ export class FeedbackComponent implements OnInit {
         alert('An unexpected error occurred. Please try again later.');
       },
       complete: () => {
-        console.log('Successfully fetched feedback list...');
+        console.log('Completed getFeedbackList call...');
       },
     });
   }
