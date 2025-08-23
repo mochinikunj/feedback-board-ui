@@ -25,19 +25,10 @@ export class CommonService {
   }
 
   getFeedbacks(
-    sortBy = SortBy.DATE,
-    sortDirection = SortDirection.DESCENDING,
+    sortBy: SortBy,
+    sortDirection: SortDirection,
   ): Observable<object> {
-    let endPoint = `${environment.nodeUrl}/feedback`;
-
-    if (sortBy && sortDirection) {
-      endPoint += `?sortBy=${sortBy}&descendingSort=${sortDirection}`;
-    } else if (sortBy) {
-      endPoint += `?sortBy=${sortBy}`;
-    } else if (sortDirection) {
-      endPoint += `?descendingSort=${sortDirection}`;
-    }
-
+    let endPoint = `${environment.nodeUrl}/feedback?sortBy=${sortBy}&descendingSort=${sortDirection}`;
     return this.http.get(endPoint);
   }
 }
