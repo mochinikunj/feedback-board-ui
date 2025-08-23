@@ -20,7 +20,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #e97000;
+  background: #007bff;
   height: 40vh;
   width: 40vw;
 }
