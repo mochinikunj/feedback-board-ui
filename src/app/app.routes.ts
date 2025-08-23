@@ -6,4 +6,9 @@ export const routes: Routes = [
     path: '',
     component: FeedbackComponent,
   },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
 ];
