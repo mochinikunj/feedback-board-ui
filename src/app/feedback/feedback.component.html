@@ -70,7 +70,14 @@
               role="button"
               (click)="setRating(star)"
             >
-              <i class="fa fa-star text-warning"></i>
+              <span *ngIf="star <= selectedRating; else emptyStar">
+                <i class="fa fa-star text-warning"></i
+              ></span>
+              <ng-template #emptyStar>
+                <span>
+                  <i class="fa fa-star"></i>
+                </span>
+              </ng-template>
             </span>
           </div>
           <div

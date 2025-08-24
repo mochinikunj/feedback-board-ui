@@ -139,6 +139,7 @@ export class FeedbackComponent implements OnInit {
 
   resetContactForm() {
     this.feedbackForm.reset();
+    this.selectedRating = 0;
   }
 
   getFeedbackList() {
